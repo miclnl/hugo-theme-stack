@@ -25,7 +25,7 @@
     <footer class="article-time">
         {{ partial "helper/icon" "clock" }}
         <time class="article-time--published">
-            {{ index $.Site.Data.days (dateFormat "Monday" .Date) }}, {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}	
+            {{ index $.Site.Data.days ( dateFormat "Monday" .Date ) }}, {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}	
 			
         </time>
     </footer>

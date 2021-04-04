@@ -38,7 +38,7 @@
 
         <li {{ if $active }} class='current' {{ end }}>
             <a href='{{ .URL }}'>
-                <span>{{ if .Pre }} <i class='fas fa-{{- .Pre -}}'></i> {{ end }} {{- .Name -}}</span>
+                <span>{{ if .Pre }}<i class='fas fa-{{- .Pre -}}'></i>{{ end }} {{- .Name -}}</span>
             </a>
         </li>
         {{ end }}

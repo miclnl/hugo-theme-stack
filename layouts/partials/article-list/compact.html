@@ -6,7 +6,7 @@
             </h2>
             <footer class="article-time">
                 <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-                    {{ index $.Site.Data.days-nl (printf "%d" .Date.Weekday) }}, {{ .Date.Day }} {{ index $.Site.Data.months-nl (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                    {{ index $.Site.Data.days (printf "%d" .Date.Weekday) }}, {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
                 </time>
             </footer>
         </div>

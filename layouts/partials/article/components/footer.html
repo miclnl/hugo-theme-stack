@@ -12,7 +12,7 @@
     <section class="article-time">
         {{ partial "helper/icon" "clock" }}
         <span class="article-time--modified">
-            {{ T "article.lastUpdatedOn" }} {{ index $.Site.Data.days (printf "%d" .lastUpdated.Weekday) }}, {{ .lastUpdated.Day }} {{ index $.Site.Data.months (printf "%d" .lastUpdated.Month) }} {{ .lastUpdated.Year }} 
+            {{ T "article.lastUpdatedOn" }} {{ index $.Site.Data.days (dateFormat "Monday" .Lastmod) }}, {{ .Lastmod.Day }} {{ index $.Site.Data.months (printf "%d" .Lastmod.Month) }} {{ .Lastmod.Year }} 
         </span>
     </section>
     {{- end -}}

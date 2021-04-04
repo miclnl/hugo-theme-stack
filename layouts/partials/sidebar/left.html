@@ -37,8 +37,8 @@
         {{ $active := or (eq $currentPage.Title .Name) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
 
         <li {{ if $active }} class='current' {{ end }}>
-            <a href='{{ .URL }}' {{ if .Pre }} class='fas fa-{{- .Pre -}}' {{ end }}>
-                <span>{{- .Name -}}</span>
+            <a href='{{ .URL }}'>
+                <span>{{ if .Pre }} <i class='fas fa-{{- .Pre -}}'></i> {{ end }} {{- .Name -}}</span>
             </a>
         </li>
         {{ end }}

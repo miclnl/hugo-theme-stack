@@ -1,31 +1,7 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-{{- $title := partialCached "data/title" . .RelPermalink -}}
-<title>{{ $title }}</title>
-<meta property="og:title" content="{{ $title }}" />
-<meta name="twitter:title" content="{{ $title }}" />
-<meta itemprop="name" content="{{ $title }}" />
-<meta name="application-name" content="{{ $title }}" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-
-{{- $description := partialCached "data/description" . .RelPermalink -}}
-<meta name='description' content='{{ $description }}'>
-<meta itemprop="description" content="{{ $description }}" />
-<meta property="og:description" content="{{ $description }}" />
-<meta name="twitter:description" content="{{ $description }}" />
-
-<base href="{{ .Permalink }}">
-<link rel='canonical' href='{{ .Permalink }}' itemprop='url'>
-<meta name="url" content="{{ .Permalink }}" />
-<meta name="twitter:url" content="{{ .Permalink }}" /> 
-<meta property="og:url" content="{{ .Permalink }}" />
-
-<meta property="og:locale" content="{{ .Language.Lang }}">
-<meta name="language" content="{{ .Language.LanguageName }}">
-{{ range .AllTranslations }}
-  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
-{{ end }}
+{{- partial "head/seo.html" . -}}
 
 {{- partial "head/style.html" . -}}
 {{- partial "head/script.html" . -}}

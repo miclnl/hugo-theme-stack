@@ -36,6 +36,11 @@
     <meta name="news_keywords" content="{{ index . 0 }}" />
     <meta property="article:section" content="{{ index . 0 }}" /> 
   {{ end }}
+  
+  {{- $terms := union .Page.Params.Categories .Page.Params.Tags .Page.Params.Keywords -}}
+  {{- if $terms }}
+    <meta name="keywords" content="{{ delimit $terms ", " }}">
+  {{- end }}
 
   <script defer type="application/ld+json">
     {

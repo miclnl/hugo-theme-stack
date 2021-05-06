@@ -37,7 +37,7 @@
     <meta property="article:section" content="{{ index . 0 }}" /> 
   {{ end }}
   
-  {{- $terms := union .Page.Params.Categories .Page.Params.Tags .Page.Params.Keywords -}}
+  {{- $terms := union .Page.Params.Tags .Page.Params.Keywords -}}
   {{- if $terms }}
     <meta name="keywords" content="{{ delimit $terms ", " }}">
   {{- end }}
